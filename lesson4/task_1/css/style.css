@@ -1,0 +1,25 @@
+body {
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: .5rem;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16rem;
+    padding: 1rem;
+}
+
+.picture img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}

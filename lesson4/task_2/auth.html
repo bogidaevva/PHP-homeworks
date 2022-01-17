@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9cf9a6173e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="user">
+            <a href="#"><i class="fas fa-user-astronaut"></i></a>
+            <p>Личный кабинет</p>
+        </div>
+    
+        <form method="post" action="handler.php">
+            <span>messege</span>
+            <div>
+                <label for="login">Введите логин</label>
+                <input type="text" id="login" name="login">
+            </div>
+            <div>
+                <label for="password">Введите пароль</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <input type="submit" value="Отправить">
+        </form>
+        
+    </main>
+
+    <script src="auth.js"></script>
+</body>
+</html>
