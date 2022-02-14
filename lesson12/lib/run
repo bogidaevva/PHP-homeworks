@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . '../../commands/Command1.php';
+require_once __DIR__ .'../../commands/Command2.php';
+require_once 'CommandsLibrary.php';
+
+$commands_library = new CommandsLibrary();
+$commands_library->initCommandsArr();
+
+if ($argv[1] == 'list') {
+    $commands_library->printCommands();
+} else if ($argv[1] != 'list') {
+    $name = $argv[1];
+    $command = $commands_library->getCommand($name); // -> true / false
+
+    if ($command) {
+        if ($argv[2] && $argv[2] == 'help') {
+            echo $command->help();
+        } else {
+            $command->execute();
+        }
+    } else {
+        echo "Команда $name не зарегистрирована.";
+    }
+}
+
+
