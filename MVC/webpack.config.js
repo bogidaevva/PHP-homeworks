@@ -19,7 +19,7 @@ module.exports = (env, argv) => {
             filename: 'js/[name].js',
             path: path.resolve(__dirname, 'public/build'),
             clean: true,
-            assetModuleFilename: 'pictures/[name][ext]'
+            assetModuleFilename: 'images/[name][ext]'
         },
         // настройка plugins (обычно обрабатывают файлы после создания бандла. Они более мощные и более сложные)
         plugins: [

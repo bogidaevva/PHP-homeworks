@@ -28,7 +28,7 @@
     <?php endforeach; ?>
 
     <!-- ЗАМЕНИТЬ ПУТЬ -->
-    <script src="../build/js/cakes.js"></script>
+    <script src="/build/js/cakes.js"></script>
 </body>
 
 </html>
