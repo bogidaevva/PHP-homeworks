@@ -1,0 +1,17 @@
+{
+    "name": "olgabogidaeva/mvc",
+    "autoload": {
+        "psr-4": {
+            "Cakes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Olga_Bogidaeva",
+            "email": "o.bogidaevva@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    }
+}
