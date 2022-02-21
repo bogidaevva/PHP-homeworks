@@ -45,19 +45,19 @@ class CakeDAO
 
     public function getCakesByPrice($min, $max)
     {
-        $sql = "SELECT title, description, price, picture FROM tb_cakes WHERE price > ? and price < ?";
+        $sql = "SELECT id, title, description, price, picture FROM tb_cakes WHERE price > ? and price < ?";
         $params = [$min, $max];
         $statement = $this->prepareRequest($sql);
         $statement->execute($params);
-        return $statement->fetch(PDO::FETCH_ASSOC);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function getCakesByTitle($title)
     {
-        $sql = "SELECT title, description, price, picture FROM tb_cakes WHERE price > ? and price < ?";
-        $params = [$title];
+        
+        $sql = "SELECT id, title, description, price, picture FROM tb_cakes WHERE title = ? ";
         $statement = $this->prepareRequest($sql);
-        $statement->execute($params);
-        return $statement->fetch(PDO::FETCH_ASSOC);
+        $statement->execute([$title]);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }

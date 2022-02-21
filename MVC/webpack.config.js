@@ -1,18 +1,18 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path'); // подключили библиотеку path из node_modules
+const webpack = require('webpack'); // также подключаем и (модуль) webpack 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // const WebpackDevServer = require('webpack-dev-server');
 // const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-module.exports = (env, argv) => {
+module.exports = (env, argv) => { // экспортировали из модуля объект с настройками webpack
     const devMode = argv.mode !== 'production';
     return {
-        mode: "production",
+        mode: "production", // объект для dev сервера
         // точки входа
         entry: {
-            'main': './assets/js/main.js',
-            'cakes': './assets/js/cakes.js'
+            'main': './public/js/main.js',
+            'cakes': './public/js/cakes.js'
         },
         // точки выхода
         output: {

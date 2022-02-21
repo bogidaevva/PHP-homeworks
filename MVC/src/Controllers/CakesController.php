@@ -66,7 +66,7 @@ class CakesController extends Controller
             echo $this->getTemplate('cake.php', $data);
         } else {
             $data = ['message' => 'Произошла ошибка, попробуйте еще раз.'];
-            echo $this->getTemplate('cakes.php', $data);
+            echo $this->getTemplate('main.php', $data);
         }
     }
 
@@ -78,10 +78,26 @@ class CakesController extends Controller
 
         $cakes = $this->cakeDAO->getCakesByPrice($min, $max);
         if ($cakes) {
-            $data = ['message' => 'Ehffhfhfhfh'];
-            echo $this->getTemplate('cakes.php', $data);;
+            $data = ['success' => $cakes];
+            echo json_encode($data);
         } else {
-            echo 'error';
+            $data = ['error' => 'По вашему запрсу не найдено ни одного торта.'];
+            echo json_encode($data);
+        }
+    }
+
+    public function searchCakesByTitle()
+    {
+        $get = $_GET;
+        $title = $get['title'];
+
+        $cakes = $this->cakeDAO->getCakesByTitle($title);
+        if ($cakes) {
+            $data = ['success' => $cakes];
+            echo json_encode($data);
+        } else {
+            $data = ['error' => 'По вашему запрсу не найдено ни одного торта.'];
+            echo json_encode($data);
         }
     }
 }

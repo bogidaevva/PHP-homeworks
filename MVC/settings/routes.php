@@ -25,5 +25,10 @@ return [
         'path' => '/search_by_price',
         'method' => 'GET',
         'controller' => 'Cakes\Controllers\CakesController::searchCakesByPrice'
+    ],
+    [
+        'path' => '/search_by_title',
+        'method' => 'GET',
+        'controller' => 'Cakes\Controllers\CakesController::searchCakesByTitle'
     ]
 ];

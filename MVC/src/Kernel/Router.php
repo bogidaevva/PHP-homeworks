@@ -23,7 +23,7 @@ class Router
                 return;
             }
         }
-        // $obj = new ErrorController();
-        // $obj->error404();
+        $obj = new ErrorController();
+        $obj->error404();
     }
 }

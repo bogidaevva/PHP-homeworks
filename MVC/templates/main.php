@@ -12,9 +12,9 @@
         <a href="/cakes">Торты</a>
     </nav>
 
-    <?= $message  ?>
+    <?= $message ?>
     <h3>Заполните поля формы, чтобы добавить информацию о новом торте</h3>
-    <form action="/add" method="post" name="add-cake" enctype="multipart/form-data">
+    <form action="/add" method="post" name="addition" enctype="multipart/form-data">
         <label>Название
             <input type="text" name="title" required>
         </label>
@@ -29,8 +29,8 @@
         </label>
         <input type="submit" value="Добавить">
     </form>
-
+    
     <!-- ИЗМЕНИТЬ ПУТЬ К ФАЙЛУ : НАЧИНАЕТСЯ С /build -->
-    <script src="/build/js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 "use strict";
 
-console.log('hello');
-document.forms.add-cake.addEventListening('submit', function(event) {
+document.forms.addition.addEventListener('submit', function(event) {
     event.preventDefault();
 
     if (this.elements.title.value.trim() == "" || this.elements.price.value.trim() == "" 
